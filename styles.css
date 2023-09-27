@@ -172,14 +172,16 @@ h2 {
 }
 .chatout
 {
-  height: 80vh;
+  height: 90vh;
   background-color:grey;
   border: black 5px solid;
+  overflow: scroll;
 }
 .chatbox{
   display: flex;
   flex-direction: column;
-  gap:5px
+  gap:5px;
+  overflow: scroll;
 }
 .enter-text
 {
@@ -196,6 +198,11 @@ h2 {
   height: 40px;
   width: 50px;
   margin: auto;
+  background-color: #171717;
+  border: 1px solid white;
+  outline: none;
+  color: #ddd;
+  border-radius: 10px;
 }
 
 /* faq */
