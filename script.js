@@ -66,7 +66,7 @@ function displayNames() {
 
 const bt=  document.getElementById("submit")
 bt.addEventListener("click", ()=>{
-  let text = document.getElementById("input").value;
+  let text = document.getElementById("userin").value;
   if (!text) return;
   const box = document.getElementsByClassName("chatbox")[0]
   let bubble = document.createElement("div");
