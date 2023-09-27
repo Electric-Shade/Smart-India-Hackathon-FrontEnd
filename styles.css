@@ -7,7 +7,7 @@ body {
   margin: 0px;
   padding: 0px;
   -webkit-font-smoothing: antialiased;
-  font-family: Octanis, sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 * {
@@ -22,14 +22,9 @@ header {
   width: 100vw;
   background-color: black;
 }
-
-.logo {
-  margin: 1em;
-  padding: 1em;
-}
-
 .logo > img {
-  width: 20vw;
+  width: 25vw;
+  height: 10vh;
 }
 
 .nav-bar {
@@ -81,17 +76,37 @@ a {
 
 .title {
   text-align: center;
-  margin: 5vh 0vh 15vh 0vh;
+  margin: 5vh 0vh 5vh 0vh;
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 4.5rem;
   margin: 10px auto;
 }
 
 h2 {
-  margin: 0px auto;
+  margin: 10px auto;
   width: 40vw;
+}
+.query
+{
+  text-align: center;
+}
+#query
+{
+  margin: 8vh auto;
+  width: 40vw;
+  height: 8vh;
+  border-radius: 25px;
+  font-size: 1.5rem;
+}
+#query-search
+{
+  margin: 8vh auto;
+  width: 13vw;
+  height: 8vh;
+  border-radius: 25px;
+  font-size: 1.5rem;
 }
 
 .to-upload {
@@ -99,15 +114,41 @@ h2 {
   width: 30vw;
   border-radius: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .to-upload > button {
   width: 10rem;
   height: 3rem;
   margin: 1rem;
-  border-radius: 20px;
+  border-radius: 25px;
   background: rgb(184, 180, 180);
+}
+/* list-doc */
+
+.list-doc
+{
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  border: 10px solid black;
+  border-radius: 25px;
+}
+.left-list{
+  width: 20vw;
+  padding: 10px;
+  border: solid 2px black;
+  display: flex;
+  flex-direction: column;
+}
+.doc-stack>p{
+  margin: 1rem;
+  height: 2rem;
+  width: 100%;
+}
+.right-pic{
+
 }
 
 /* Upload */
@@ -121,11 +162,6 @@ h2 {
   border-radius: 25px;
 }
 #upimage{
-  width: 7rem;
-  height: 3rem;
-  border-radius: 10px;
-}
-#uppdf{
   width: 7rem;
   height: 3rem;
   border-radius: 10px;
@@ -158,8 +194,6 @@ h2 {
   height: 90vh;
   /* justify-content: center; */
   border-radius: 25px;
-  
-  
 }
 img
 {
@@ -192,7 +226,7 @@ img
 }
 .chatout
 {
-  height: 95vh;
+  height: 85vh;
   background-color:black;
   border: black 5px solid;
   overflow: scroll;
@@ -202,14 +236,14 @@ img
   display: flex;
   flex-direction: column;
   gap:5px;
-  overflow: scroll;;
+  overflow: scroll;
   overflow: hidden;
   border-radius: 25px;
 }
 .enter-text
 {
   padding: 5px;
-  width: 100%;
+  width: 90%;
   padding: 0px;
 }
 
@@ -222,7 +256,7 @@ img
 
 #submit{
   height: 40px;
-  width: 90px;
+  width: 80px;
   margin: auto;
   background-color: #171717;
   border: 1px solid white;
