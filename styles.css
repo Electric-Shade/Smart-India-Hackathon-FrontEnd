@@ -1,0 +1,169 @@
+:root {
+  --light-bg: rgb(228, 235, 249);
+  --six: #00000066;
+}
+
+body {
+  margin: 0px;
+  -webkit-font-smoothing: antialiased;
+  font-family: Octanis, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Header*/
+header {
+  display: flex;
+  justify-content: space-around;
+  padding: 0px;
+  width: 100vw;
+}
+
+.logo {
+  margin: 1em;
+  padding: 1em;
+}
+
+.logo > img {
+  width: 20vw;
+}
+
+.nav-bar {
+  margin: 1em;
+  padding: 1em;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+li {
+  margin: 0rem 2rem;
+}
+
+a {
+  font-size: 1.5rem;
+  color: white;
+}
+
+a:hover {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-color: white;
+  font-size: 1.55rem;
+}
+
+/* Main */
+
+/* Home */
+.home {
+  background-color: #f4f6f6;
+  background-image: url(./background-nc.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: auto;
+  height: 100vh;
+}
+
+.hero {
+  margin: 1rem;
+  padding: 2em;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  text-align: center;
+  margin: 10vh;
+}
+
+h1 {
+  font-size: 5rem;
+  margin: 10px auto;
+}
+
+h2 {
+  margin: 0px auto;
+  width: 40vw;
+}
+
+.to-upload {
+  margin: auto;
+  width: 30vw;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.to-upload > button {
+  width: 10rem;
+  height: 3rem;
+  margin: 1rem;
+  border-radius: 20px;
+  background: rgb(184, 180, 180);
+}
+
+/* Upload */
+.upload {
+  /* background-image: url(./background-cn.jpg); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+}
+
+.upleft {
+  width: 20vw;
+  border: 5px solid black;
+}
+
+.upmid {
+  background-color: #1d1d1d;
+  width: 40vw;
+  border: 2px solid #2f994d;
+}
+
+.upright {
+  background-color: #1d1d1d;
+  width: 40vw;
+  border: 2px solid #2f994d;
+}
+
+#imagestack {
+  border: 2px solid #2f994d;
+  height: 90vh;
+  background-color: #1d1d1d;
+  padding: 20px;
+}
+
+.choose {
+  padding: 1rem;
+  margin: 0px;
+  background-color: #1d1d1d;
+}
+
+form {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* faq */
+.faq {
+  background-image: url(./background-cn.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+}
+
+.img-btn{
+    width: 100%;
+    height: 25px;
+    background-color: #1d1d1d;
+    border: 1px solid #2ca92c;
+}

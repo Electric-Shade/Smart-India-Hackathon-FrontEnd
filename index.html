@@ -6,171 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.cdnfonts.com/css/octanis" rel="stylesheet">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="styles.css">
   <title>Simply Draft</title>
 
-  <style>
-    :root {
-      --light-bg: rgb(228, 235, 249);
-      --six: #00000066;
-    }
-
-    body {
-      margin: 0px;
-      -webkit-font-smoothing: antialiased;
-      font-family: Octanis, sans-serif;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-
-    /* Header*/
-    header {
-      display: flex;
-      justify-content: space-around;
-      padding: 0px;
-    }
-
-    .logo {
-      margin: 1em;
-      padding: 1em;
-    }
-
-    .logo>img {
-      width: 20vw;
-    }
-
-    .nav-bar {
-      margin: 1em;
-      padding: 1em;
-    }
-
-    ul {
-      display: flex;
-      justify-content: space-around;
-      list-style-type: none;
-    }
-
-    li {
-      margin: 0rem 2rem;
-    }
-
-    a {
-      font-size: 1.5rem;
-      color: white;
-    }
-
-    a:hover {
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-color: white;
-      font-size: 1.55rem;
-    }
-
-
-    /* Main */
-
-    /* Home */
-    .home {
-      background-color: #f4f6f6;
-      background-image: url(./background-nc.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: auto;
-      height: 100vh;
-    }
-
-    .hero {
-      margin: 1rem;
-      padding: 2em;
-      color: white;
-      background-color: rgba(0, 0, 0, 0.1);
-    }
-
-    .title {
-      text-align: center;
-      margin: 10vh;
-    }
-
-    h1 {
-      font-size: 5rem;
-      margin: 10px auto;
-    }
-
-    h2 {
-      margin: 0px auto;
-      width: 40vw;
-    }
-
-    .to-upload {
-      margin: auto;
-      width: 30vw;
-      border-radius: 20px;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .to-upload>button {
-      width: 10rem;
-      height: 3rem;
-      margin: 1rem;
-      border-radius: 20px;
-      background: rgb(184, 180, 180);
-    }
-
-    /* Upload */
-    .upload {
-      background-image: url(./background-cn.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      height: 100vh;
-      display: flex;
-    }
-
-    .upleft {
-      width: 20vw;
-      border: 5px solid black;
-    }
-
-    .upmid {
-      background-color: rgba(0, 0, 255, .2);
-      width: 40vw;
-      border: 5px solid black;
-    }
-
-    .upright {
-      background-color: rgba(0, 255, 0, .2);
-      width: 40vw;
-      border: 5px solid black;
-    }
-
-    #imagestack {
-      background-color: rgba(255, 255, 255, .2);
-      height: 90vh;
-    }
-
-    .choose {
-      padding: 1rem;
-      margin: 0px;
-    }
-
-    form {
-      color: white;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    /* faq */
-    .faq
-    {
-      background-image: url(./background-cn.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      height: 100vh;
-      display: flex;
-    }
-  </style>
 </head>
 
 <body>
@@ -206,14 +44,14 @@
         </div>
 
         <div class="to-upload"> <!-- Buttons -->
-          <button type="button" onclick="upImage()" id="upimage"> Upload Image</button>
-          <button type="button" onclick="upPdf()" id="uppdf">Upload Pdf</button>
+          <a href="#upload"><button type="button"  id="upimage"> Upload Image</button></a>
+          <a href="#upload"><button type="button"  id="uppdf">Upload Pdf</button></a>
         </div>
 
       </div>
     </section>
 
-    <section class="upload"> <!-- second section, contains upload images-->
+    <section class="upload" id="upload"> <!-- second section, contains upload images-->
       <div class="upleft">
         <div class="imageupload">
           <div id='imagestack'>
@@ -255,50 +93,7 @@
     </div>
 
   </main>
-  <!-- JavaScript-->
-  <script>
-    let input = document.querySelector("input")
-    let estack
-    let imagesArray = []
-    let imageNames = []
-
-    input.addEventListener("change", () => {
-      const files = input.files
-      for (let i = 0; i < files.length; i++) {
-        imagesArray.push(files[i])
-        imageNames.push(files[i].name)
-      }
-      displayNames();
-    })
-
-    function displayNames() {
-      var dispDiv = document.getElementById('imagestack')
-
-      for (let i = 0; i < imageNames.length; i++) {
-        let a = document.createElement('Button');
-        name = imageNames[i]
-        dispDiv.appendChild(a)
-        a.innerHTML = name
-        a.style.color = 'black'
-        a.style.height = '50px'
-        a.style.width = '100%'
-      }
-    }
-    function displayImages() {
-      let images = ""
-      imagesArray.forEach((image, index) => {
-        images += `<div class="image">
-                <img src="${URL.createObjectURL(image)}" alt="image">
-                <span onclick="deleteImage(${index})">&times;</span>
-              </div>`
-      })
-      var dispImg = document.getElementById('imagedisplay')
-      let output = document.createElement('output');
-      dispImg.appendChild(output)
-      output.innerHTML = images
-
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 
 </html>
