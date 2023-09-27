@@ -179,7 +179,8 @@ h2 {
 .chatbox{
   display: flex;
   flex-direction: column;
-  gap:5px
+  gap:5px;
+  overflow: hidden;
 }
 .enter-text
 {
