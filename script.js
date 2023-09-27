@@ -6,14 +6,14 @@ let imageNames = [];
 input.addEventListener("change", () => {
   const files = input.files;
   for (let i = 0; i < files.length; i++) {
-    imagesArray.push(files[i]);
+    imagesArray.push(URL.createObjectURL(files[i]));
     imageNames.push(files[i].name);
   }
   displayNames();
 });
 
 function displayNames() {
-  var dispDiv = document.getElementById("imagestack");
+  let dispDiv = document.getElementById("imagestack");
 
   for (let i = 0; i < imageNames.length; i++) {
     let a = document.createElement("Button");
@@ -22,17 +22,34 @@ function displayNames() {
     a.innerHTML = name;
     a.setAttribute("style", "width: 100%; height: 30px; border: 1px solid #2f994d; background-color: #1d1d1d; color: white;")
   }
+  const img = document.getElementById("img")
+  let children = dispDiv.children;
+  for( let i=0; i < children.length; i++){
+    children[i].addEventListener("click", ()=>{
+        img.setAttribute("src", imagesArray[i])        
+    })
+  }
+  
+  Tesseract.recognize(
+    imagesArray[4],
+    'eng',
+    { logger: m => console.log(m) }
+  ).then(({ data: { text } }) => {
+    console.log(text);
+  })
+
 }
-function displayImages() {
-  let images = "";
-  imagesArray.forEach((image, index) => {
-    images += `<div class="image">
-                <img src="${URL.createObjectURL(image)}" alt="image">
-                <span onclick="deleteImage(${index})">&times;</span>
-              </div>`;
-  });
-  var dispImg = document.getElementById("imagedisplay");
-  let output = document.createElement("output");
-  dispImg.appendChild(output);
-  output.innerHTML = images;
-}
+
+
+
+// const arr = []
+// function displayImages() {
+//   let images = "";
+//   imagesArray.forEach((image, index) => {
+//     arr.push(URL.createObjectURL(image));
+//   });
+//   var dispImg = document.getElementById("imagedisplay");
+//   let output = document.createElement("output");
+//   dispImg.appendChild(output);
+//   output.innerHTML = images;
+// }

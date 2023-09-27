@@ -160,3 +160,12 @@ form {
   height: 100vh;
   display: flex;
 }
+
+#imagedisplay{
+    margin: auto;
+    /* display: flex; */
+    width: 40vw;
+    /* align-content: center; */
+    height: 90vh;
+    /* justify-content: center; */
+}
