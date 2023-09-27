@@ -29,14 +29,38 @@ function displayNames() {
         img.setAttribute("src", imagesArray[i])        
     })
   }
-  
-  Tesseract.recognize(
-    imagesArray[4],
-    'eng',
-    { logger: m => console.log(m) }
-  ).then(({ data: { text } }) => {
-    console.log(text);
-  })
+  const documents = []
+  const box = document.getElementsByClassName("chatbox")[0]
+  for (let i=0; i < imagesArray.length; i++){
+
+        Tesseract.recognize(
+            imagesArray[i],
+            'eng',
+            { logger: m => console.log(m) }
+        ).then(({ data: { text } }) => {
+            console.log(text);
+            documents.push(text);
+            if (imageNames.length === i+1){
+                fetch("http://127.0.0.1:8000/load_documents/", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body : JSON.stringify({documents})
+                }).then(res=>{
+                    res.json().then(r=>{
+                        console.log(r.summary);
+                        let a= document.createElement("div");
+                        a.innerHTML = r.summary;
+                        a.setAttribute("style", "width: 650px; color: beige; background: purple; border-radius:5px; padding:5px")
+                        box.appendChild(a);
+                    })
+                }).catch(err=>{
+                    console.log(err);
+                })
+            }
+        })
+  }
 
 }
 
