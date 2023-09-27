@@ -4,9 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.cdnfonts.com/css/octanis" rel="stylesheet">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap" rel="stylesheet">
   <!-- v4 -->
   <script src='https://cdn.jsdelivr.net/npm/tesseract.js@4/dist/tesseract.min.js'></script>
   <title>Simply Draft</title>
@@ -27,10 +29,11 @@
 
           <div class="nav-bar">
             <ul>
-              <li><a class="nav-btn">Home</a></li>
-              <li><a class="nav-btn">Upload</a></li>
-              <li><a class="nav-btn">About</a></li>
-              <li><a class="nav-btn">Faq</a></li>
+              <li><a href="#home" class="nav-btn">Home</a></li>
+              <li><a href="#upload" class="nav-btn">Upload</a></li>
+              <li><a href="#about" class="nav-btn">About</a></li>
+              <li><a href="#faq" class="nav-btn">Faq</a></li>
+              <li><a href="#contact" class="nav-btn">Contact Us</a></li>
             </ul>
           </div>
 
@@ -73,17 +76,56 @@
         </div>
       </div>
       <div class="upright" id="upright">
-        <div style="width: 100%;">
-          <input type="text" name="" id="input" style="width: 90%;">
+        <div class="chatout">
+          <div class="chatbox">
+          
+          </div>
+        </div>
+        
+        <div class="enter-text">
+          <label for="userin">Ask Your Questions</label>
+          <input type="text" name="" id="userin" style="width: 80%;">
           <button class="button" id="submit">Send</button>
         </div>
-        <div class="chatbox"></div>
+        
       </div>
 
     </section>
 
-    <section class="faq"> <!-- third section, contains faq-->
-      
+    <section class="about" id="about"> <!-- third section, contains faq-->
+
+
+    </section>
+
+    <section class="faq" id="faq"> <!-- third section, contains faq-->
+      <h2>Frequently Asked Questions</h2>
+      <div class="drop">
+        <details id="one">
+          <summary>Do I need any legal expertise to use your platform?</summary>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </details>
+        <details id="two">
+          <summary>Is there a limit to the number of documents I can create using your platform?</summary>
+          <p>You can navigate through the questions by clicking on the summaries.</p>
+        </details>
+        <details id="three">
+          <summary>How much does it cost to use your platform?</summary>
+          <p>You can navigate through the questions by clicking on the summaries.</p>
+        </details>
+        <details id="four">
+          <summary>What is your company's commitment to data privacy and security?</summary>
+          <p>You can navigate through the questions by clicking on the summaries.</p>
+        </details>
+        <details id="five">
+          <summary>Does your platform provide legal advice?</summary>
+          <p>You can navigate through the questions by clicking on the summaries.</p>
+        </details>
+        <!-- Add more FAQ items as needed -->
+      </div>
+    </section>
+
+    <section class="contact" id="contact"> <!-- third section, contains faq-->
+
 
     </section>
 

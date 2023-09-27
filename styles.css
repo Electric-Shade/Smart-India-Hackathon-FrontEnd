@@ -5,6 +5,7 @@
 
 body {
   margin: 0px;
+  padding: 0px;
   -webkit-font-smoothing: antialiased;
   font-family: Octanis, sans-serif;
 }
@@ -19,6 +20,7 @@ header {
   justify-content: space-around;
   padding: 0px;
   width: 100vw;
+  background-color: black;
 }
 
 .logo {
@@ -48,9 +50,10 @@ li {
 a {
   font-size: 1.5rem;
   color: white;
+  text-decoration: none;
 }
 
-a:hover {
+.nav-bar>a:hover {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-color: white;
@@ -61,8 +64,7 @@ a:hover {
 
 /* Home */
 .home {
-  background-color: #f4f6f6;
-  background-image: url(./assets/background-cn.jpg);
+  background-color: white;
   background-repeat: no-repeat;
   background-size: cover;
   width: auto;
@@ -70,15 +72,14 @@ a:hover {
 }
 
 .hero {
-  margin: 1rem;
+  margin: 5rem 1rem;
   padding: 2em;
   color: white;
-  background-color: rgba(0, 0, 0, 0.1);
-}
+  background-color: black;}
 
 .title {
   text-align: center;
-  margin: 10vh;
+  margin: 5vh 0vh 15vh 0vh;
 }
 
 h1 {
@@ -114,76 +115,147 @@ h2 {
   background-size: cover;
   height: 100vh;
   display: flex;
+  border: 10px solid black;
 }
-
+#upimage{
+  width: 7rem;
+  height: 3rem;
+  border-radius: 10px;
+}
+#uppdf{
+  width: 7rem;
+  height: 3rem;
+  border-radius: 10px;
+}
 .upleft {
   width: 20vw;
-  border: 5px solid black;
+  background-color: black;
+  border: solid 2px grey ;
 }
 
-.upmid {
-  background-color: #1d1d1d;
-  width: 40vw;
-  border: 2px solid #2f994d;
-}
-
-.upright {
-  background-color: #1d1d1d;
-  width: 40vw;
-  border: 2px solid #2f994d;
-  display: flex;
-  flex-direction: column-reverse;
-  gap: 10px;
-}
-
-#imagestack {
-  border: 2px solid #2f994d;
-  height: 90vh;
-  background-color: #1d1d1d;
-  padding: 10px;
-}
-
-.choose {
-  padding: 1rem;
-  margin: 0px;
-  background-color: #1d1d1d;
-}
-
-form {
+.upleft>form {
   color: white;
   display: flex;
   justify-content: space-between;
 }
 
-/* faq */
-.faq {
-  background-image: url(./background-cn.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  display: flex;
+#imagestack {
+  height: 87vh;
+  background-color: black;
+  padding: 10px;
+}
+#imagedisplay{
+  margin: auto;
+  /* display: flex; */
+  width: 40vw;
+  /* align-content: center; */
+  height: 90vh;
+  /* justify-content: center; */
 }
 
-#imagedisplay{
-    margin: auto;
-    /* display: flex; */
-    width: 40vw;
-    /* align-content: center; */
-    height: 90vh;
-    /* justify-content: center; */
+.choose {
+  padding: 1rem;
+  margin: 0px;
+  background-color: white;
+}
+
+.upmid {
+  width: 40vw;
+  background-color: white;
+  border: solid 5px black;
+}
+
+.upright {
+  width: 40vw;
+  background-color: black;
+  border: solid 10px white ;
+}
+.chatout
+{
+  height: 80vh;
+  background-color:grey;
+  border: black 5px solid;
 }
 .chatbox{
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap:5px
+}
+.enter-text
+{
+  padding: 5px;
 }
 
-#input{
+#userin{
   height: 40px;
   font-size: 17px;
+  margin: auto;
 }
 
 #submit{
   height: 40px;
   width: 50px;
+  margin: auto;
+}
+
+/* faq */
+.faq {
+  background-image: url(./assets/faq-back.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  padding: 5em;
+  display: flex;
+  flex-direction: column;
+}
+.faq>h2
+{
+  color: white;
+  font-size: 2.7rem;
+  text-align: center;
+}
+.drop
+{
+  width: 50vw;
+  margin: 5rem auto;
+}
+
+details {
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  color: white;
+}
+
+summary {
+  background-color: #f1f1f1;
+  color: black;
+  padding: 10px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  outline: none;
+}
+
+details[open] summary {
+  background-color: #ddd;
+}
+
+p {
+  padding: 10px;
+}
+
+
+/*about*/
+.about{
+  background-color: white;
+  height: 100vh;
+  display: flex;
+}
+/* contact */
+.contact{
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
 }
