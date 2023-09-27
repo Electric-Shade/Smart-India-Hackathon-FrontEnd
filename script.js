@@ -20,7 +20,7 @@ function displayNames() {
     name = imageNames[i];
     dispDiv.appendChild(a);
     a.innerHTML = name;
-    a.setAttribute('class', "img-btn")
+    a.setAttribute("style", "width: 100%; height: 30px; border: 1px solid #2f994d; background-color: #1d1d1d; color: white;")
   }
 }
 function displayImages() {
