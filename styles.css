@@ -124,32 +124,6 @@ h2 {
   border-radius: 25px;
   background: rgb(184, 180, 180);
 }
-/* list-doc */
-
-.list-doc
-{
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  display: flex;
-  border: 10px solid black;
-  border-radius: 25px;
-}
-.left-list{
-  width: 20vw;
-  padding: 10px;
-  border: solid 2px black;
-  display: flex;
-  flex-direction: column;
-}
-.doc-stack>p{
-  margin: 1rem;
-  height: 2rem;
-  width: 100%;
-}
-.right-pic{
-
-}
 
 /* Upload */
 .upload {
